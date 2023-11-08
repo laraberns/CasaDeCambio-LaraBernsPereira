@@ -13,24 +13,6 @@
 <body class="d-flex justify-center align-items-center min-vh-100 m-0">
     <form class="container w-75" id="idForm">
         <h2 class="mb-3 text-center">Casa de Câmbio XPTO</h2>
-        <div class="mb-3">
-            <select class="form-select coinsListChange" aria-label="Default select example" required>
-                <option disabled selected>Qual o tipo de moeda de origem?</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <select class="form-select coinsListRecieve" aria-label="Default select example" required>
-                <option disabled selected>Qual o tipo de moeda de destino?</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="inputValueToExchange" class="form-label fw-semibold">Valor</label>
-            <input type="number" class="form-control" id="inputValueToExchange" aria-describedby="emailHelp"
-                placeholder="100" required>
-
-        </div>
 
         <div class="mb-3">
             <label class="form-label fw-semibold">Cotação</label>
@@ -48,6 +30,29 @@
                     Cotação de Venda
                 </label>
                 <div id="emailHelp" class="form-text">Valor caso queira comprar alguma moeda estrangeira.</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Tipo de Moedas</label>
+            <select class="form-select coinsListChange" aria-label="Default select example" required>
+                <option disabled selected>Qual o tipo de moeda de origem?</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <select class="form-select coinsListRecieve" aria-label="Default select example" required>
+                <option disabled selected>Qual o tipo de moeda de destino?</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label for="inputValueToExchange" class="form-label fw-semibold">Valor</label>
+            <input type="number" class="form-control" id="inputValueToExchange" aria-describedby="emailHelp"
+                placeholder="100" required min="0" step="0.01">
+            <div id="emailHelp" class="form-text">
+                Cotação de Compra -> Digite o valor que deseja vender. <br>
+                Cotação de Venda -> Digite o valor que deseja comprar. 
             </div>
         </div>
 
