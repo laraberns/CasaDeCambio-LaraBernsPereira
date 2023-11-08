@@ -11,20 +11,50 @@
 </head>
 
 <body class="d-flex justify-center align-items-center min-vh-100 m-0">
-    <form class="container w-75">
+    <form class="container w-75" id="idForm">
         <h2 class="mb-3 text-center">Casa de Câmbio XPTO</h2>
         <div class="mb-3">
-            <select class="form-select coinsListChange" aria-label="Default select example">
-                <option disabled selected>Qual o tipo de moeda para trocar?</option>
+            <select class="form-select coinsListChange" aria-label="Default select example" required>
+                <option disabled selected>Qual o tipo de moeda de origem?</option>
             </select>
         </div>
 
         <div class="mb-3">
-            <select class="form-select coinsListRecieve" aria-label="Default select example">
-                <option disabled selected>Qual o tipo de moeda para receber?</option>
+            <select class="form-select coinsListRecieve" aria-label="Default select example" required>
+                <option disabled selected>Qual o tipo de moeda de destino?</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="mb-3">
+            <label for="inputValueToExchange" class="form-label fw-semibold">Valor</label>
+            <input type="number" class="form-control" id="inputValueToExchange" aria-describedby="emailHelp"
+                placeholder="100" required>
+
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label fw-semibold">Cotação</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="idCompra" required>
+                <label class="form-check-label" for="idCompra">
+                    Cotação de Compra
+                </label>
+                <div id="emailHelp" class="form-text">Valor caso queira vender uma moeda estrangeira à casa de câmbio.
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="idVenda" required>
+                <label class="form-check-label" for="idVenda">
+                    Cotação de Venda
+                </label>
+                <div id="emailHelp" class="form-text">Valor caso queira comprar alguma moeda estrangeira.</div>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-3" id="btnSubmit">Calcular</button>
+
+        <p class="mb-3 output">
+        </p>
     </form>
 
 
@@ -32,6 +62,7 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
     <script src="./scripts/displaycoins.js"></script>
+    <script src="./scripts/changeValue.js"></script>
 </body>
 
 </html>
