@@ -3,33 +3,80 @@ body {
 }
 
 header {
-    min-height: 5vh;
+    min-height: 10vh;
+    background-color: #FCFCFC;
 }
 
 main {
-    min-height: 95vh;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
 }
 
-.color-orange{
+.color-orange {
     color: #FA3700;
 }
 
-.background-grey{
+.background-grey {
     background-color: #ECE8EF;
 }
 
-.btn-orange{
+.btn-orange {
     background-color: #FA3700;
-    color: white; 
+    color: white;
     border-radius: 20px;
     border: none;
     padding: 15px 20px;
 }
 
-.btn-orange:hover{
+.btn-orange:hover {
     background-color: #ff2600;
 }
 
-.font-small{
-    font-size: 15px;
+.font-small {
+    font-size: 1rem;
+}
+
+.left-spacing{
+    margin-left: 2rem;
+}
+
+#idForm{
+    width: 75vw;
+}
+
+@media (min-width: 768px) {
+    h4{
+        font-size: 2rem;
+    }
+
+    .form-check {
+        display: grid;
+        align-items: center;
+        grid-template-areas: "button header"
+            "button text";
+        grid-template-columns: auto 1fr;
+        column-gap: 1rem;
+    }
+
+    .form-check-input {
+        grid-area: button;
+    }
+
+    .form-check-label {
+        grid-area: header;
+    }
+
+    #emailHelp {
+        grid-area: text;
+        font-size: 1rem;
+    }
+
+    .form-check-label, .font-label, .output{
+        font-size: 1.5em;
+    }
+
+    #idForm{
+        width: 50vw;
+    }
 }

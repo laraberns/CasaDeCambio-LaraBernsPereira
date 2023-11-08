@@ -17,19 +17,19 @@
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <header class="navbar bg-white d-flex justify-content-center align-items-center text-bold">
+    <header class="navbar d-flex px-5 align-items-center text-bold">
         <nav>
             <div class="container-fluid">
                 <a href="#">
                     <img src="./assets/DALL·E 2023-11-08 15.17.02 - generate a logo of a  store named _xpto_. use the letters xpto.png"
-                        alt="Logo of XPTO" width="40" height="40">
+                        alt="Logo of XPTO" width="50" height="50">
                 </a>
             </div>
         </nav>
     </header>
 
     <main class="background-grey">
-        <form class="container w-75 py-4" id="idForm">
+        <form class="container py-4" id="idForm">
 
             <div class="mb-4">
                 <h4 class="form-label fw-semibold color-orange">Cotação</h4>
@@ -52,23 +52,28 @@
             </div>
 
             <div class="mb-2">
-                <h4 class="form-label fw-semibold color-orange">Tipo de Moedas</h4>
-                <label class="form-label fw-semibold ">Origem</label>
-                <select class="form-select coinsListChange shadow-sm" aria-label="Default select example" required>
+                <h4 class="form-label fw-semibold color-orange">Tipos de Moedas</h4>
+                <div class="left-spacing">
+                    <label class="form-label fw-semibold font-label">Origem</label>
+                    <select class="form-select coinsListChange shadow-sm" aria-label="Default select example" required>
+                    </select>
+                </div>
 
                 </select>
             </div>
 
             <div class="mb-4">
-                <label class="form-label fw-semibold">Destino</label>
-                <select class="form-select coinsListRecieve shadow-sm" aria-label="Default select example" required>
-                </select>
+                <div class="left-spacing">
+                <label class="form-label fw-semibold font-label">Destino</label>
+                    <select class="form-select coinsListRecieve shadow-sm" aria-label="Default select example" required>
+                    </select>
+                </div>
             </div>
 
             <div class="mb-4">
                 <h4 for="inputValueToExchange" class="form-label fw-semibold color-orange">Valor</h4>
-                <input type="number" class="form-control mb-2 shadow-sm" id="inputValueToExchange" aria-describedby="emailHelp"
-                    placeholder="100" required min="0" step="0.01">
+                <input type="number" class="form-control mb-2 shadow-sm " id="inputValueToExchange"
+                    aria-describedby="emailHelp" placeholder="100" required min="0" step="0.01">
                 <div id="emailHelp" class="form-text">
                     <p>Cotação de Compra: Digite o valor que deseja vender.</p>
                     <p>Cotação de Venda: Digite o valor que deseja comprar.</p>
