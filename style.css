@@ -1,0 +1,35 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    min-height: 5vh;
+}
+
+main {
+    min-height: 95vh;
+}
+
+.color-orange{
+    color: #FA3700;
+}
+
+.background-grey{
+    background-color: #ECE8EF;
+}
+
+.btn-orange{
+    background-color: #FA3700;
+    color: white; 
+    border-radius: 20px;
+    border: none;
+    padding: 15px 20px;
+}
+
+.btn-orange:hover{
+    background-color: #ff2600;
+}
+
+.font-small{
+    font-size: 15px;
+}

@@ -8,60 +8,79 @@
     <title>Casa de Câmbio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&family=Open+Sans:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="d-flex justify-center align-items-center min-vh-100 m-0">
-    <form class="container w-75" id="idForm">
-        <h2 class="mb-3 text-center">Casa de Câmbio XPTO</h2>
+<body class="d-flex flex-column min-vh-100">
+    <header class="navbar bg-white d-flex justify-content-center align-items-center text-bold">
+        <nav>
+            <div class="container-fluid">
+                <a href="#">
+                    <img src="./assets/DALL·E 2023-11-08 15.17.02 - generate a logo of a  store named _xpto_. use the letters xpto.png"
+                        alt="Logo of XPTO" width="40" height="40">
+                </a>
+            </div>
+        </nav>
+    </header>
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Cotação</label>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="idCompra" required>
-                <label class="form-check-label" for="idCompra">
-                    Cotação de Compra
-                </label>
-                <div id="emailHelp" class="form-text">Valor caso queira vender uma moeda estrangeira à casa de câmbio.
+    <main class="background-grey">
+        <form class="container w-75 py-5" id="idForm">
+
+            <div class="mb-4">
+                <h4 class="form-label fw-semibold color-orange">Cotação</h4>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="idCompra" required>
+                    <label class="form-check-label" for="idCompra">
+                        Cotação de Compra
+                    </label>
+                    <div id="emailHelp" class="form-text">Valor caso queira vender uma moeda estrangeira à casa de
+                        câmbio.
+                    </div>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="idVenda" required>
+                    <label class="form-check-label" for="idVenda">
+                        Cotação de Venda
+                    </label>
+                    <div id="emailHelp" class="form-text">Valor caso queira comprar alguma moeda estrangeira.</div>
                 </div>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="flexRadioDefault" id="idVenda" required>
-                <label class="form-check-label" for="idVenda">
-                    Cotação de Venda
-                </label>
-                <div id="emailHelp" class="form-text">Valor caso queira comprar alguma moeda estrangeira.</div>
+
+            <div class="mb-2">
+                <h4 class="form-label fw-semibold color-orange">Tipo de Moedas</h4>
+                <label class="form-label fw-semibold">Moeda de Origem</label>
+                <select class="form-select coinsListChange" aria-label="Default select example" required>
+
+                </select>
             </div>
-        </div>
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Tipo de Moedas</label>
-            <select class="form-select coinsListChange" aria-label="Default select example" required>
-                <option disabled selected>Qual o tipo de moeda de origem?</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <select class="form-select coinsListRecieve" aria-label="Default select example" required>
-                <option disabled selected>Qual o tipo de moeda de destino?</option>
-            </select>
-        </div>
-
-        <div class="mb-3">
-            <label for="inputValueToExchange" class="form-label fw-semibold">Valor</label>
-            <input type="number" class="form-control" id="inputValueToExchange" aria-describedby="emailHelp"
-                placeholder="100" required min="0" step="0.01">
-            <div id="emailHelp" class="form-text">
-                Cotação de Compra -> Digite o valor que deseja vender. <br>
-                Cotação de Venda -> Digite o valor que deseja comprar. 
+            <div class="mb-4">
+                <label class="form-label fw-semibold">Moeda de Destino</label>
+                <select class="form-select coinsListRecieve" aria-label="Default select example" required>
+                </select>
             </div>
-        </div>
 
-        <button type="submit" class="btn btn-primary mb-3" id="btnSubmit">Calcular</button>
+            <div class="mb-4">
+                <h4 for="inputValueToExchange" class="form-label fw-semibold color-orange">Valor</h4>
+                <input type="number" class="form-control mb-2" id="inputValueToExchange" aria-describedby="emailHelp"
+                    placeholder="100" required min="0" step="0.01">
+                <div id="emailHelp" class="form-text">
+                    <p>Cotação de Compra -> Digite o valor que deseja vender.</p>
+                    <p>Cotação de Venda -> Digite o valor que deseja comprar.</p>
+                </div>
+            </div>
 
-        <p class="mb-3 output">
-        </p>
-    </form>
+            <button type="submit" class="btn-orange mb-4" id="btnSubmit">Calcular</button>
 
+            <p class="mb-4 output fw-bold">
+            </p>
+        </form>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
